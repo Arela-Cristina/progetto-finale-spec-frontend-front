@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom"
+import style from './ui-styles/MenuNav.module.css'
+
 export default function MenuNav() {
     return (
-        <ul>
-            <li>Home</li>
-            <li>Brawlers</li>
-            <li>My Favorite Brawlers</li>
+        <ul className={style.menuList}>
+            <Link to="/">Home</Link>
+            <Link to="BrawlersList">Brawlers</Link>
+            <Link to="FavoriteBrawlers">Brawler Preferiti</Link>
         </ul>
     )
 }

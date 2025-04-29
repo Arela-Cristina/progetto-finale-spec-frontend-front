@@ -6,4 +6,9 @@
   /* debug */
   background-color: #242424;
   color: white;
+ 
+}
+
+li {
+  list-style: none;
 }

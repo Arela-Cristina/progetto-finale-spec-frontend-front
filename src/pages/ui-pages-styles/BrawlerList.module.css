@@ -1,0 +1,27 @@
+.mainListContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px rgb(0, 0, 0) solid;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    border: 1px solid #2196F3;
+    margin: 5px;
+    padding: 1rem;
+}
+
+.listElement {
+    background: #FFC107;
+    width: 10rem;
+    height: 10rem;
+}

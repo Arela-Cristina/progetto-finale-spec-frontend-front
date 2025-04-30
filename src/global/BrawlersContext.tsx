@@ -7,7 +7,7 @@ export interface BrawlersContextType {
     setBrawler: (brawler: Brawler[]) => void;
 }
 
-const BrawlersContext = createContext<BrawlersContextType | undefined>(undefined);
+const BrawlersContext = createContext<BrawlersContextType | null>(null);
 
 export default BrawlersContext
 

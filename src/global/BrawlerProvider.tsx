@@ -37,7 +37,7 @@ export const BrawlersProvider = ({ children }: Props) => {
                 }
             }
         };
-
+        console.log('useEffect Brawler Provider')
         fetchBrawlers()
     }, [])
 

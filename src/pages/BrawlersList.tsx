@@ -15,7 +15,7 @@ export default function BrawlersList() {
     }
 
     // const { brawler } = brawlerContext
-    const { filteredBrawlers } = useContext(SearchContext)!;
+    const { filteredBrawlers } = searchBrawlerContext
    
 
     return (

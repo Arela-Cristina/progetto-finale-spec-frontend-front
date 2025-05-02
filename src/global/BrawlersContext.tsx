@@ -4,7 +4,7 @@ import type { Brawler } from '../types/types';
 
 export interface BrawlersContextType {
     brawler: Brawler[];
-    setBrawler: (brawler: Brawler[]) => void;
+    setBrawler: (value: Brawler[]) => void;
 }
 
 const BrawlersContext = createContext<BrawlersContextType | null>(null);

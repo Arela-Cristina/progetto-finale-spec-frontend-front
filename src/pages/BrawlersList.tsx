@@ -2,8 +2,9 @@ import { useContext } from "react"
 import BrawlersContext from "../global/BrawlersContext"
 import SearchContext from "../global/SearchContext"
 import { Brawler } from "../types/types"
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 import style from './ui-pages-styles/BrawlerList.module.css'
+import BrawlerCard from "../components/BrawlerCard"
 
 export default function BrawlersList() {
 
@@ -20,22 +21,22 @@ export default function BrawlersList() {
 
 
     return (
+        <>
+            <section className={style.mainListContainer}>
+                <h2>Lista di Brawlers</h2>
+                <ul className={style.listContainer}>
+                    {filteredBrawlers.map((b: Brawler, id: number) => (
+                        <li key={id} className={style.listElement}>
+                            <Link to={`/BrawlersList/${b.id}`}>
+                                <BrawlerCard id={b.id} title={b.title} category={b.category} />
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+            <Outlet />
 
-        <section className={style.mainListContainer}>
-            <h2>Lista di Brawlers</h2>
-            <ul className={style.listContainer}>
-                {filteredBrawlers.map((b: Brawler, id: number) => (
-                    <li key={id} className={style.listElement}>
-                        <Link to={`/BrawlersList/${b.id}`}>
-                            <figure>
-                                <div>{b.title}</div>
-                                <p>{b.category}</p>
-                            </figure>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </section>
+        </>
 
     )
 }

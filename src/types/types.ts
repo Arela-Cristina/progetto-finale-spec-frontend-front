@@ -1,4 +1,5 @@
 export type Brawler = {
+    id: number,
     title: string, //nome brawler
     category: string, // rarity brawler
     role: string, // cecchino, tank, assasino ... 

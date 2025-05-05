@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import BrawlersList from "./pages/BrawlersList";
 import BrawlerDetail from "./pages/BrawlerDetail";
 import FavoriteBrawlers from "./pages/FavoriteBrawlers";
+import BrawlersComparison from "./pages/BrawlersComparison";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
                 <Route path=":id" element={<BrawlerDetail />} />
               </Route>
               <Route path="FavoriteBrawlers" element={<FavoriteBrawlers />} />
+              <Route path="BrawlersComparison" element={<BrawlersComparison />} />
             </Route>
           </Routes>
         </BrowserRouter>

@@ -7,6 +7,7 @@ export default function MenuNav() {
             <Link to="/">Home</Link>
             <Link to="/BrawlersList">Brawlers</Link>
             <Link to="/FavoriteBrawlers">Brawler Preferiti</Link>
+            <Link to="/BrawlersComparison">Compara Brawler</Link>
         </ul>
     )
 }

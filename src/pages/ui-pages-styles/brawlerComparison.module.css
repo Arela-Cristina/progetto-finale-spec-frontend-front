@@ -1,0 +1,72 @@
+.mainMenuSelectContainer {
+    background-color: coral;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardSelectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #FFEB3B;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.cardSelectElement {
+    background-color: #47afdf;
+    cursor: pointer;
+}
+
+.cardSelectedElement {
+    border: 2px solid black
+}
+
+.comparisonGrid {
+    display: grid;
+    grid-template-columns: 150px repeat(3, 1fr);
+    grid-template-rows: repeat(3, 30px);
+    gap: 10px;
+    border: 1px solid #ddd;
+    background-color: pink;
+    height: fit-content;
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+.comparisonGrid .header {
+    text-align: center;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.comparisonGrid .label {
+    text-align: left;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.comparisonGrid .value {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Flexibilidad de columnas */
+.comparisonGrid[data-columns="1"] {
+    grid-template-columns: 150px 1fr;
+}
+
+.comparisonGrid[data-columns="2"] {
+    grid-template-columns: 150px 1fr 1fr;
+}
+
+.comparisonGrid[data-columns="3"] {
+    grid-template-columns: 150px 1fr 1fr 1fr;
+}

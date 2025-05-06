@@ -16,19 +16,36 @@ export default function BrawlerDetail() {
         return null
     }
 
+
+
     const numericId = Number(id);
-    const brawler = brawlerContext.brawler.find((b: Brawler) => b.id === numericId);
+    const brawlerObject = brawlerContext.brawler.find((b: Brawler) => b.id === numericId);
 
     if (isNaN(numericId)) return <p>ID non valido 😅</p>;
-    if (!brawler) return <p>Brawler non trovato 😅</p>;
+    if (!brawlerObject) return <p>Brawler non trovato 😅</p>;
 
 
-    const { title, category, role, health, basicAttack, super: superAttack, gadgets, starPower, overdrive } = brawler
+    const { title, category, role, health, basicAttack, super: superAttack, gadgets, starPower, overdrive } = brawlerObject
+
+
 
 
     const onCloseBrawlerDetail = () => {
         navigate(-1)
     }
+
+    //handle favorites
+    const { favorites, addToFavorites, removeFromFavorites } = brawlerContext;
+
+    const onAddToFavorites = () => {
+        addToFavorites(brawlerObject);
+    };
+
+    const onRemoveFromFavorites = () => {
+        removeFromFavorites(brawlerObject.id);
+    };
+
+    const isFavorite = favorites.some((fav) => fav.id === brawlerObject.id);
 
     return (
         <section className={style.modaleBrawler}>
@@ -59,7 +76,7 @@ export default function BrawlerDetail() {
                             {starPower.map((g, i) => <p key={i}> {g} </p>)}
                         </div>
                     </div>
-                    <button> Aggiungi ai Preferiti ❤️</button>
+                    <button onClick={isFavorite ? onRemoveFromFavorites : onAddToFavorites}> {isFavorite ? "Elimina dai Preferiti 💔" : "Aggiungi ai Preferiti ❤️"}</button>
                     <button onClick={onCloseBrawlerDetail}> Chiude ✖️ </button>
                 </div>
             </div>

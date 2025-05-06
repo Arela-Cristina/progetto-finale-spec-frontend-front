@@ -28,7 +28,7 @@ export default function FavoriteBrawlers() {
                 <ul className={style.favoritesList}>
                     {favorites.map((brawler: Brawler) => (
                         <li key={brawler.id} className={style.listItem}>
-                            <Link to={`/BrawlersList/${brawler.id}`}>
+                            <Link to={`/BrawlerDetail/${brawler.id}`}>
                                 <h3>{brawler.title}</h3>
                             </Link>
                         </li>

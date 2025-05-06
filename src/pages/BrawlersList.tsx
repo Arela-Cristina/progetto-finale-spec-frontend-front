@@ -27,14 +27,14 @@ export default function BrawlersList() {
                 <ul className={style.listContainer}>
                     {filteredBrawlers.map((b: Brawler, id: number) => (
                         <li key={id} className={style.listElement}>
-                            <Link to={`/BrawlersList/${b.id}`}>
+                            <Link to={`/BrawlerDetail/${b.id}`}> 
                                 <BrawlerCard id={b.id} title={b.title} category={b.category} />
                             </Link>
                         </li>
                     ))}
                 </ul>
             </section>
-            <Outlet />
+            {/* <Outlet /> */}
 
         </>
 

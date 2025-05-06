@@ -58,9 +58,25 @@ export const BrawlersProvider = ({ children }: Props) => {
         }
     }, [favorites])
 
+    //Aggiungere un Brawler ai preferiti
+    const addToFavorites = (brawler: Brawler) => {
+        setFavorites((prevFavorites) => {
+            if (!prevFavorites.some((fav) => fav.id === brawler.id)) {
+                return [...prevFavorites, brawler];
+            }
+            return prevFavorites;
+        });
+    };
+
+    //Elimina un Brawler dei preferiti
+    const removeFromFavorites = (id: number) => {
+        setFavorites((prevFavorites) => prevFavorites.filter(favBra => favBra.id !== id))
+    };
+
+
 
     return (
-        <BrawlersContext.Provider value={{ brawler, setBrawler }}>
+        <BrawlersContext.Provider value={{ brawler, setBrawler, favorites, addToFavorites, removeFromFavorites }}>
             {children}
         </BrawlersContext.Provider>
     )

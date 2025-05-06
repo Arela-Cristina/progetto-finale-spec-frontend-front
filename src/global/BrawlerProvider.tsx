@@ -13,6 +13,9 @@ export const BrawlersProvider = ({ children }: Props) => {
 
     const [brawler, setBrawler] = useState<Brawler[]>([])
 
+    const [favorites, setFavorites] = useState<Brawler[]>([])
+
+    // fetch Barwlers
     useEffect(() => {
 
         const fetchBrawlers = async () => {
@@ -40,6 +43,20 @@ export const BrawlersProvider = ({ children }: Props) => {
         console.log('useEffect Brawler Provider')
         fetchBrawlers()
     }, [])
+
+
+    // caricare automaticamente Brawler Preferiti da localStorage
+    useEffect(() => {
+        const savedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        setFavorites(savedFavorites)
+    }, [])
+
+    //Salvare preferiti
+    useEffect(() => {
+        if (favorites.length > 0) {
+            localStorage.setItem('favorites', JSON.stringify(favorites))
+        }
+    }, [favorites])
 
 
     return (

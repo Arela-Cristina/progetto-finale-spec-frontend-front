@@ -20,9 +20,7 @@ function App() {
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
               <Route path="BrawlersList" element={<BrawlersList />} />
-              <Route path="BrawlersList" element={<BrawlersList />}>
-                <Route path=":id" element={<BrawlerDetail />} />
-              </Route>
+              <Route path="BrawlerDetail/:id" element={<BrawlerDetail />} />
               <Route path="FavoriteBrawlers" element={<FavoriteBrawlers />} />
               <Route path="BrawlersComparison" element={<BrawlersComparison />} />
             </Route>

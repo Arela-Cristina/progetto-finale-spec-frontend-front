@@ -77,7 +77,7 @@ export default function BrawlerDetail() {
                         </div>
                     </div>
                     <button onClick={isFavorite ? onRemoveFromFavorites : onAddToFavorites}> {isFavorite ? "Elimina dai Preferiti 💔" : "Aggiungi ai Preferiti ❤️"}</button>
-                    <button onClick={onCloseBrawlerDetail}> Chiude ✖️ </button>
+                    <button onClick={onCloseBrawlerDetail}> Torna alla Lista ✖️ </button>
                 </div>
             </div>
         </section>

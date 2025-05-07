@@ -1,13 +1,41 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
+import openMenu from '../assets/menu-ux/openMenu.gif'
+import closeMenu from '../assets/menu-ux/closeMenu.gif'
 import style from './ui-styles/MenuNav.module.css'
 
 export default function MenuNav() {
+
+    // menu
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleMenu = () => setIsOpen(prev => !prev);
+    const setCloseMenu = () => setIsOpen(false);
+
     return (
-        <ul className={style.menuList}>
-            <Link to="/">Home</Link>
-            <Link to="/BrawlersList">Brawlers</Link>
-            <Link to="/FavoriteBrawlers">Brawler Preferiti</Link>
-            <Link to="/BrawlersComparison">Compara Brawler</Link>
-        </ul>
+
+        <div className="relative flex">
+            
+                <img
+                    src={isOpen ? openMenu : closeMenu}
+                    alt="menu"
+                    className="cursor-pointer w-[12rem]"
+                    onClick={toggleMenu}
+
+                />
+           
+            <div className="absolute left-48 top-20">
+                {isOpen && (
+
+                    <ul className=" flex gap-4 ">
+                        <Link to="/" onClick={setCloseMenu} className="block hover:text-fuchsia-500">Home</Link>
+                        <Link to="/BrawlersList" onClick={setCloseMenu} className="block hover:text-fuchsia-500">Brawlers</Link>
+                        <Link to="/FavoriteBrawlers" onClick={setCloseMenu} className="block hover:text-fuchsia-500">Brawler Preferiti</Link>
+                        <Link to="/BrawlersComparison" onClick={setCloseMenu} className="block hover:text-fuchsia-500">Compara Brawler</Link>
+                    </ul>
+                )}
+
+            </div>
+        </div>
     )
 }

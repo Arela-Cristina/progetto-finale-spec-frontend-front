@@ -16,7 +16,7 @@ export default function BrawlersList() {
         return null
     }
 
-    // const { brawler } = brawlerContext => impossibile destrutturare come oggetto perche brawler e un Brawler{ }
+    // const { brawler } = brawlerContext => impossibile destrutturare come oggetto perche brawler e una struttura Brawler[]
     const { filteredBrawlers } = searchBrawlerContext
 
 
@@ -28,7 +28,7 @@ export default function BrawlersList() {
                     {filteredBrawlers.map((b: Brawler, id: number) => (
                         <li key={id} className={style.listElement}>
                             <Link to={`/BrawlerDetail/${b.id}`}> 
-                                <BrawlerCard id={b.id} title={b.title} category={b.category} />
+                                <BrawlerCard id={b.id} title={b.title} category={b.category} image={b.image}/>
                             </Link>
                         </li>
                     ))}

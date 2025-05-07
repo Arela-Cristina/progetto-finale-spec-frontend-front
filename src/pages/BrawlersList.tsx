@@ -24,6 +24,7 @@ export default function BrawlersList() {
         <>
             <section className={style.mainListContainer}>
                 <h2>Lista di Brawlers</h2>
+            
                 <ul className={style.listContainer}>
                     {filteredBrawlers.map((b: Brawler, id: number) => (
                         <li key={id} className={style.listElement}>

@@ -3,26 +3,23 @@
     flex-direction: column;
     border: 1px rgb(0, 0, 0) solid;
     gap: 2rem;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 2rem;
-    position: relative;
 }
 
 .listContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
     align-content: space-between;
     align-items: center;
-    border: 1px solid #2196F3;
-    margin: 5px;
-    padding: 1rem;
+    border: 1px solid #2196F3
 }
 
 .listElement {
-    background: #FFC107;
+    /* background: #FFC107;
     width: 10rem;
-    height: 10rem;
+    height: 10rem; */
 }

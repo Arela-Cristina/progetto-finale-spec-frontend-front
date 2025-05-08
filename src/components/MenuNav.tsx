@@ -7,14 +7,14 @@ import style from './ui-styles/MenuNav.module.css'
 export default function MenuNav() {
 
     // menu
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     const toggleMenu = () => setIsOpen(prev => !prev);
-    const setCloseMenu = () => setIsOpen(false);
+    const setCloseMenu = () => setIsOpen(true);
 
     return (
 
-        <div className="relative flex">
+        <div className="relative flex left-8 top-[10px]">
             
                 <img
                     src={isOpen ? openMenu : closeMenu}

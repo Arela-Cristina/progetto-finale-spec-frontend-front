@@ -15,7 +15,7 @@ export default function Header() {
     return (
         <>
 
-            <div className="bg-gray-800 text-white p-4 flex items-center justify-between shadow-md h-[8rem]">
+            <div className=" flex items-center justify-between h-[7rem] bg-[#282039] w-[90%] mx-auto rounded-b-[5px]">
                 <MenuNav />
                 {location.pathname === "/BrawlersList" ? (<SearchBar />) : (<div className="text-lg font-semibold m-8">Brawl Time</div>)}
             </div>

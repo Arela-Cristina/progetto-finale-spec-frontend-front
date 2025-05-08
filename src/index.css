@@ -4,16 +4,20 @@
 @tailwind utilities; */
 
 * {
-  padding: 0;
+  /* padding: 0;
   
-  box-sizing: border-box;
+  box-sizing: border-box; */
 
   /* debug */
- 
+
   /* color: black; */
- 
+
 }
 
 li {
   list-style: none;
+}
+
+body {
+  background-image: url('background.webp')
 }

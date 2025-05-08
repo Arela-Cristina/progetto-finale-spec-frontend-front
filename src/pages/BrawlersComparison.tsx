@@ -40,21 +40,24 @@ export default function BrawlersComparison() {
     return (
         <>
             <section className={style.mainMenuSelectContainer}>
-                <ul className={style.cardSelectContainer}>
-                    {brawler.map((b: Brawler, id: number) => (
-                        <li
-                            key={id}
-                            className={`${style.cardSelectElement} ${selectedBrawler.some(selected => selected.id === b.id)
-                                ? style.cardSelectedElement
-                                : ""
-                                }`}
-                            onClick={() => handleSelectBrawler(b)}
+                <div >
+                    <ul className={style.cardSelectContainer}>
+                        {brawler.map((b: Brawler, id: number) => (
+                            <li
+                                key={id}
+                                className={`${style.cardSelectElement} ${selectedBrawler.some(selected => selected.id === b.id)
+                                    ? style.cardSelectedElement
+                                    : ""
+                                    }`}
+                                onClick={() => handleSelectBrawler(b)}
 
-                        >
-                            <BrawlerCard id={b.id} title={b.title} category={b.category} />
-                        </li>
-                    ))}
-                </ul>
+                            >
+                                <BrawlerCard id={b.id} title={b.title} category={b.category} image={b.image} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
 
 
 
@@ -88,8 +91,6 @@ export default function BrawlersComparison() {
                         </>
                     )}
                 </div>
-
-
 
             </section>
         </>

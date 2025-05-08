@@ -2,11 +2,14 @@
     background-color: coral;
     display: flex;
     justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
 }
 
 .cardSelectContainer {
     display: flex;
-    flex-direction: column;
+
     gap: 1rem;
     background-color: #FFEB3B;
     margin-top: 1rem;
@@ -23,6 +26,7 @@
 .cardSelectedElement {
     border: 2px solid black
 }
+
 
 .comparisonGrid {
     display: grid;

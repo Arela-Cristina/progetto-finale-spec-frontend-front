@@ -3,6 +3,7 @@ import BrawlersContext from "../global/BrawlersContext"
 import { Brawler } from "../types/types"
 import BrawlerCard from "../components/BrawlerCard"
 import style from './ui-pages-styles/brawlerComparison.module.css'
+import confrontaBrawlersTitle from '../assets/titles/titolo-confronta-i-brawler.svg'
 
 export default function BrawlersComparison() {
 
@@ -40,8 +41,12 @@ export default function BrawlersComparison() {
     return (
         <>
             <section className={style.mainMenuSelectContainer}>
-                <div >
-                    <ul className={style.cardSelectContainer}>
+                <div className="w-[22rem] h-[11rem]">
+                    <img src={confrontaBrawlersTitle} alt="title brawler list" />
+                </div>
+                <p>Puoi Selezzionare fino a 3 Brawlers 😄</p>
+                <div>
+                    <ul className={`${style.scrollbarHidden} flex overflow-x-auto space-x-1 px-4 py-2`}>
                         {brawler.map((b: Brawler, id: number) => (
                             <li
                                 key={id}
@@ -52,7 +57,7 @@ export default function BrawlersComparison() {
                                 onClick={() => handleSelectBrawler(b)}
 
                             >
-                                <BrawlerCard id={b.id} title={b.title} category={b.category} image={b.image} />
+                                <BrawlerCard id={b.id} title={b.title} image={b.image} variant="compare" />
                             </li>
                         ))}
                     </ul>
@@ -91,6 +96,7 @@ export default function BrawlersComparison() {
                         </>
                     )}
                 </div>
+
 
             </section>
         </>

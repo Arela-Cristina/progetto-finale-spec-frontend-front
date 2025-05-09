@@ -3,13 +3,18 @@ type BrawlerCardProps = {
     category: string;
     image: string;
     id: number;
+    variant?: 'list' | 'compare';
 }
 
-export default function BrawlerCard({ title, category, image }: BrawlerCardProps) {
-    console.log('image', image)
+export default function BrawlerCard({ title, category, image, variant = 'list' }: BrawlerCardProps) {
+
+    const baseStyles = "border-[2px] border-[#282039] rounded-lg shadow-md overflow-hidden transition-shadow duration-300 cursor-pointer"
+    const variantStyles = variant === 'compare'
+        ? "bg-[#ffe2f3] hover:shadow-lg w-16 h-auto text-xs"
+        : "bg-[coral] hover:shadow-xl w-[8rem] h-[11rem]"
 
     return (
-        <figure className="relative bg-[coral] w-[8rem] h-[11rem] border-[2px] border-[#282039] rounded-lg shadow-md overflow-hidden hover:shadow-xl  transition-shadow duration-300 cursor-pointer">
+        <figure className={`relative ${baseStyles} ${variantStyles}`}>
             <div className="w-full aspect-square  overflow-hidden">
                 <img src={`http://localhost:3001/images/avatar/${image}`} alt={title}
                     className="w-full h-full object-cover"

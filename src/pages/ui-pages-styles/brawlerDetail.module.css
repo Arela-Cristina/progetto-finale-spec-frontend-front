@@ -1,14 +1,22 @@
 .modaleBrawler {
-    background-color: #7fffd454;
-    width: 100%;
-    height: 100%;
-    
+    width: 75%;
+    margin: 0 auto;
+
 }
 
 
 .modaleBrawlerDetailContainer {
-    background-color: pink;
-    width: 60%;
+    background-color: #47528d87;
+    width: 100%;
     margin: 0 auto;
-  
+    margin-top: 2rem;
+    border-radius: 6px;
+    padding: 2rem 2rem;
+
+}
+
+.detailImage {
+    background-color: pink;
+   
+    padding: 1rem;
 }

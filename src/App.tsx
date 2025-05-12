@@ -8,6 +8,7 @@ import BrawlersList from "./pages/BrawlersList";
 import BrawlerDetail from "./pages/BrawlerDetail";
 import FavoriteBrawlers from "./pages/FavoriteBrawlers";
 import BrawlersComparison from "./pages/BrawlersComparison";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
               <Route path="BrawlerDetail/:id" element={<BrawlerDetail />} />
               <Route path="FavoriteBrawlers" element={<FavoriteBrawlers />} />
               <Route path="BrawlersComparison" element={<BrawlersComparison />} />
+              <Route path="*" element={<PageNotFound />} />
             </Route>
           </Routes>
         </BrowserRouter>

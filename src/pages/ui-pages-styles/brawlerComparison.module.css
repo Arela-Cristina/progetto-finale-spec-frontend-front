@@ -1,7 +1,4 @@
-
-
 .mainMenuSelectContainer {
-    background-color: coral;
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -24,40 +21,50 @@
 }
 
 .cardSelectedElement {
-    border: 2px solid black
+    border: 5px ridge #9C27B0;
+    border-radius: 5px;
 }
 
+.cell {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
 
 .comparisonGrid {
     display: grid;
     grid-template-columns: 150px repeat(3, 1fr);
     grid-template-rows: repeat(3, 30px);
-    gap: 10px;
+    gap: 3rem;
     height: fit-content;
     width: fit-content;
     margin: 1rem auto;
+    background-color: #47528d87;
+    padding: 2rem 2rem;
+    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .comparisonGrid .header {
     text-align: center;
     font-weight: bold;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
+    background-color: #282039;
+    color: white;
+    border-radius: 5px;
 }
 
 .comparisonGrid .label {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
+    background-color: #282039;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
 }
 
 .comparisonGrid .value {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ddd;
+    text-align: end;
+    padding: 3px;
 }
 
 /* Flexibilidad de columnas */

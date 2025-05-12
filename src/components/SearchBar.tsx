@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState, useEffect } from "react"
 import SearchContext from "../global/SearchContext"
 
 
@@ -6,11 +6,30 @@ export default function SearchBar() {
 
     const SearchQuerycontext = useContext(SearchContext)
 
+
     if (!SearchQuerycontext) {
         return null
     }
 
     const { searchQuery, SetSearchQuery, sortOrder, setSortOrder } = SearchQuerycontext
+
+    const [inputValue, setInputValue] = useState(searchQuery);
+    const [debounceTimeout, setDebounceTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
+
+    useEffect(() => {
+
+        if (debounceTimeout) {
+            clearTimeout(debounceTimeout);
+        }
+
+        const newTimeout = setTimeout(() => {
+            console.log('Debounce eseguito', inputValue)
+            SetSearchQuery(inputValue);
+        }, 500);
+
+    }, [inputValue, SetSearchQuery]);
+
+
 
     return (
         <>
@@ -21,7 +40,7 @@ export default function SearchBar() {
                     name="search"
                     id="search"
                     value={searchQuery}
-                    onChange={(e) => SetSearchQuery(e.target.value)}
+                    onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Cerca un Brawler ☺️🔎"
                 />
                 <button

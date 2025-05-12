@@ -46,7 +46,7 @@ export default function BrawlersComparison() {
                 </div>
                 <p>Puoi Selezzionare fino a 3 Brawlers 😄</p>
                 <div>
-                    <ul className={`${style.scrollbarHidden} flex overflow-x-auto space-x-1 px-4 py-2`}>
+                    <ul className={`${style.scrollbarHidden} flex overflow-x-auto space-x-1 px-4 py-2 w-[90%] mx-auto justify-center`}>
                         {brawler.map((b: Brawler, id: number) => (
                             <li
                                 key={id}

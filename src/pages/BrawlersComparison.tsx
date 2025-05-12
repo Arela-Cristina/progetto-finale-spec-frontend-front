@@ -4,6 +4,7 @@ import { Brawler } from "../types/types"
 import BrawlerCard from "../components/BrawlerCard"
 import style from './ui-pages-styles/brawlerComparison.module.css'
 import confrontaBrawlersTitle from '../assets/titles/titolo-confronta-i-brawler.svg'
+import squeack from '../assets/gif/squeack-not-found.webp'
 
 export default function BrawlersComparison() {
 
@@ -44,8 +45,9 @@ export default function BrawlersComparison() {
                 <div className="w-[22rem] h-[11rem]">
                     <img src={confrontaBrawlersTitle} alt="title brawler list" />
                 </div>
-                <p>Puoi Selezzionare fino a 3 Brawlers 😄</p>
+                
                 <div>
+
                     <ul className={`${style.scrollbarHidden} flex overflow-x-auto space-x-1 px-4 py-2 w-[90%] mx-auto justify-center`}>
                         {brawler.map((b: Brawler, id: number) => (
                             <li
@@ -66,36 +68,38 @@ export default function BrawlersComparison() {
 
 
 
-                <div className={style.comparisonGrid} data-columns={selectedBrawler.length}>
-                    {/* Fila title brawlers */}
-                    <div className={style.cell}></div> {/* Cella vuota */}
-                    {selectedBrawler.length > 0 && selectedBrawler.map((b, i) => (
-                        <div key={`title-${i}`} className={style.header}>{b.title}</div> // nomi brawlers column
-                    ))}
+                {selectedBrawler.length === 0 ? (
+                    <div className="flex flex-col items-center justify-center bg-[#47528d87] p-12 w-[35rem] mx-auto rounded-[5px] mt-8">
+                        <p className="text-center  p-6 italic text-lg">Selezziona fino a 3 Brawler dal menu in alto ⬆️</p>
+                        <img className="w-[15rem]" src={squeack} alt="squeack" />
+                    </div>
+                ) : (
+                    <div className={style.comparisonGrid} data-columns={selectedBrawler.length}>
 
-                    {/* show fila si...  */}
-                    {selectedBrawler.length > 0 && (
+                        <div className={style.cell}></div>
+
+                        {selectedBrawler.map((b, i) => (
+                            <div key={`title-${i}`} className={style.header}>{b.title}</div>
+                        ))}
+
                         <>
-                            {/* Fila: Health */}
                             <div className={style.label}>Health</div>
                             {selectedBrawler.map((b, i) => (
-                                <div key={`health-${i}`} className={style.value}>{b.health}</div> // Colum Health 
+                                <div key={`health-${i}`} className={style.value}>{b.health}</div>
                             ))}
 
-                            {/* Fila: Basic Attack */}
                             <div className={style.label}>Basic Attack</div>
                             {selectedBrawler.map((b, i) => (
-                                <div key={`attack-${i}`} className={style.value}>{b.basicAttack}</div> //  Colum Basic Attack
+                                <div key={`attack-${i}`} className={style.value}>{b.basicAttack}</div>
                             ))}
 
-                            {/* Fila: Overdrive */}
                             <div className={style.label}>Overdrive</div>
                             {selectedBrawler.map((b, i) => (
-                                <div key={`over-${i}`} className={style.value}>{b.overdrive}</div> // Column Overdrive
+                                <div key={`over-${i}`} className={style.value}>{b.overdrive}</div>
                             ))}
                         </>
-                    )}
-                </div>
+                    </div>
+                )}
 
 
             </section>

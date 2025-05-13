@@ -1,0 +1,296 @@
+[
+    {
+        "title": "El Primo",
+        "category": "Raro",
+        "image": "el-primo.webp",
+        "role": "Tank",
+        "health": 11970,
+        "basicAttack": "Pugni Furiosi",
+        "super": "Gomitata Intergalattica",
+        "gadgets": [
+            "Integratori",
+            "Cintura di Asteroidi"
+        ],
+        "starPower": [
+            "El Fuego",
+            "Sprint Fiammante"
+        ],
+        "overdrive": "Balzo Gravitazionale",
+        "id": 1,
+        "createdAt": "2025-04-26T15:07:23.318Z",
+        "updatedAt": "2025-04-26T15:07:23.318Z"
+    },
+    {
+        "title": "Frank",
+        "category": "Epico",
+        "image": "frank.webp",
+        "role": "Tank",
+        "health": 12730,
+        "basicAttack": "Martellata",
+        "super": "Paralisi Sismica",
+        "gadgets": [
+            "Cuffie Antirumore",
+            "Calamita per brawler"
+        ],
+        "starPower": [
+            "Furto Energetico",
+            "Baluardo"
+        ],
+        "overdrive": "Ipocentro Sismico",
+        "id": 2,
+        "createdAt": "2025-04-26T15:11:39.933Z",
+        "updatedAt": "2025-04-26T15:11:39.933Z"
+    },
+    {
+        "title": "Berry",
+        "category": "Mitico",
+        "image": "berry.webp",
+        "role": "Supporto",
+        "health": 5000,
+        "basicAttack": "Scioglievolezza",
+        "super": "Girella Bigusto",
+        "gadgets": [
+            "Coda Multifunzione",
+            "Additivi e stabilizzanti"
+        ],
+        "starPower": [
+            "Gelato Miracoloso",
+            "Attaco d'Arte"
+        ],
+        "overdrive": "Gelatomania",
+        "id": 3,
+        "createdAt": "2025-04-26T15:15:50.909Z",
+        "updatedAt": "2025-04-26T15:15:50.909Z"
+    },
+    {
+        "title": "Pocho",
+        "category": "Raro",
+        "image": "pocho.webp",
+        "role": "Supporto",
+        "health": 7400,
+        "basicAttack": "Vibrattacco",
+        "super": "Bis",
+        "gadgets": [
+            "Diapason",
+            "Melodie Protettive"
+        ],
+        "starPower": [
+            "Musicoterapia",
+            "Riff Aggressivo"
+        ],
+        "overdrive": "Surplus",
+        "id": 4,
+        "createdAt": "2025-04-26T15:16:02.568Z",
+        "updatedAt": "2025-04-26T15:16:02.568Z"
+    },
+    {
+        "title": "Bea",
+        "category": "Epico",
+        "image": "bea.webp",
+        "role": "Cecchino",
+        "health": 5000,
+        "basicAttack": "Mega Pungiglione",
+        "super": "Sciame Robotico",
+        "gadgets": [
+            "Alveare Spargimiele",
+            "Api Pestifere"
+        ],
+        "starPower": [
+            "Seconda Chance",
+            "Armatura dell'Alveare"
+        ],
+        "overdrive": "Lunga Vita alla Regina",
+        "id": 5,
+        "createdAt": "2025-04-26T15:16:18.367Z",
+        "updatedAt": "2025-04-26T15:16:18.367Z"
+    },
+    {
+        "title": "Piper",
+        "category": "Epico",
+        "image": "piper.webp",
+        "role": "Cecchino",
+        "health": 4600,
+        "basicAttack": "Sparasole",
+        "super": "Via col Botto",
+        "gadgets": [
+            "Mirino Automatico",
+            "Proiettile Guidato"
+        ],
+        "starPower": [
+            "Imboscata",
+            "In Forma"
+        ],
+        "overdrive": "Finale col Botto",
+        "id": 6,
+        "createdAt": "2025-04-26T15:16:30.269Z",
+        "updatedAt": "2025-04-26T15:16:30.269Z"
+    },
+    {
+        "title": "Sandy",
+        "category": "Leggendario",
+        "image": "sandy.webp",
+        "role": "Controllo",
+        "health": 7600,
+        "basicAttack": "Sassata",
+        "super": "Tempesta di Sabbia",
+        "gadgets": [
+            "Sonniferi",
+            "Tranquillanti"
+        ],
+        "starPower": [
+            "Tempesta Violenta",
+            "Venti Benefici"
+        ],
+        "overdrive": "Venti Tempestosi",
+        "id": 7,
+        "createdAt": "2025-04-26T15:16:41.734Z",
+        "updatedAt": "2025-04-26T15:16:41.734Z"
+    },
+    {
+        "title": "Lou",
+        "category": "Mitico",
+        "image": "lou.webp",
+        "role": "Controllo",
+        "health": 6400,
+        "basicAttack": "Ghiaccio di Sbarramento",
+        "super": "Ghiaccio Instantaneo",
+        "gadgets": [
+            "Corazza Ghiacciata",
+            "Criosciroppo"
+        ],
+        "starPower": [
+            "Morsa del Freddo",
+            "Ipodermia"
+        ],
+        "overdrive": "Tempesta di Granite",
+        "id": 8,
+        "createdAt": "2025-04-26T15:16:50.466Z",
+        "updatedAt": "2025-04-26T15:16:50.466Z"
+    },
+    {
+        "title": "Mortis",
+        "category": "Mitico",
+        "image": "mortis.webp",
+        "role": "Assassino",
+        "health": 7600,
+        "basicAttack": "Palata",
+        "super": "Succhiasangue",
+        "gadgets": [
+            "Pala Rotante",
+            "Pala di Sopravvivenza"
+        ],
+        "starPower": [
+            "tetro Raccolto",
+            "Turboscatto"
+        ],
+        "overdrive": "Boomerang Succhiasangue",
+        "id": 9,
+        "createdAt": "2025-04-26T15:17:02.142Z",
+        "updatedAt": "2025-04-26T15:17:02.142Z"
+    },
+    {
+        "title": "Corvo",
+        "category": "Leggendario",
+        "image": "corvo.webp",
+        "role": "Assassino",
+        "health": 4800,
+        "basicAttack": "Pugnali",
+        "super": "Picchiata Venefica",
+        "gadgets": [
+            "Potenzia Difese",
+            "Tossine Debilitanti"
+        ],
+        "starPower": [
+            "Supertossine",
+            "Corvo Avvoltoio"
+        ],
+        "overdrive": "Pugnali Multiuso",
+        "id": 10,
+        "createdAt": "2025-04-26T15:17:14.242Z",
+        "updatedAt": "2025-04-26T15:17:14.242Z"
+    },
+    {
+        "title": "Tara",
+        "category": "Mitico",
+        "image": "tara.webp",
+        "role": "Assalitore",
+        "health": 6200,
+        "basicAttack": "Tris di Tarocchi",
+        "super": "Buco Nero",
+        "gadgets": [
+            "Amplificatore Psichico",
+            "Evoca-Ombre"
+        ],
+        "starPower": [
+            "Portale Nero",
+            "Terapeuta"
+        ],
+        "overdrive": "Mega Buco Nero",
+        "id": 11,
+        "createdAt": "2025-04-26T15:17:24.655Z",
+        "updatedAt": "2025-04-26T15:17:24.655Z"
+    },
+    {
+        "title": "Spike",
+        "category": "Leggendario",
+        "image": "spike.webp",
+        "role": "Assalitore",
+        "health": 5600,
+        "basicAttack": "Bomba D'Aghi",
+        "super": "Ago-Nia",
+        "gadgets": [
+            "Puntaspilli Deflagrante",
+            "Cactus Salvavita"
+        ],
+        "starPower": [
+            "Fertilizzante",
+            "Spine Flessibili"
+        ],
+        "overdrive": "Risveglio della Natura",
+        "id": 12,
+        "createdAt": "2025-04-26T15:17:33.281Z",
+        "updatedAt": "2025-04-26T15:17:33.281Z"
+    },
+    {
+        "title": "Bombardino",
+        "category": "Raro",
+        "image": "barley.webp",
+        "role": "Artigliere",
+        "health": 4800,
+        "basicAttack": "Intruglio",
+        "super": "Happy Hour",
+        "gadgets": [
+            "Mixer per Intrugli",
+            "Tonico Curativo"
+        ],
+        "starPower": [
+            "Toccasana",
+            "Cocktail Micidiale"
+        ],
+        "overdrive": "Riserve d'Annata",
+        "id": 13,
+        "createdAt": "2025-04-26T15:17:42.872Z",
+        "updatedAt": "2025-04-26T15:17:42.872Z"
+    },
+    {
+        "title": "Tick",
+        "category": "Supe Raro",
+        "image": "tick.webp",
+        "role": "Artigliere",
+        "health": 4400,
+        "basicAttack": "Minimine",
+        "super": "Testa Calda",
+        "gadgets": [
+            "Assemblatore di Mine",
+            "Autodistruttore"
+        ],
+        "starPower": [
+            "Ripristino",
+            "Ricarica Automaticka"
+        ],
+        "overdrive": "A Testa Bassa",
+        "id": 14,
+        "createdAt": "2025-04-26T15:17:58.750Z",
+        "updatedAt": "2025-04-26T15:17:58.750Z"
+    }
+]

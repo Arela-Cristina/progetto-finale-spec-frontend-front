@@ -1,6 +1,21 @@
-import { useContext, useState, useEffect } from "react"
+function debounce<T>(callback: (value: T) => void, delay: number) {
+    let timer: ReturnType<typeof setTimeout>;
+    return (value: T) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            callback(value)
+        }, delay);
+    }
+}
+
+
+
+import { useContext, useEffect, useCallback } from "react"
 import SearchContext from "../global/SearchContext"
 
+function useDebouncedCallback<T>(callback: (value: T) => void, delay: number) {
+    return useCallback(debounce(callback, delay), []);
+}
 
 export default function SearchBar() {
 
@@ -13,22 +28,16 @@ export default function SearchBar() {
 
     const { searchQuery, SetSearchQuery, sortOrder, setSortOrder } = SearchQuerycontext
 
-    const [inputValue, setInputValue] = useState(searchQuery);
-    const [debounceTimeout, setDebounceTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
+    // debounce
+    const eseguiFetch = useDebouncedCallback((searchQuery: string) => {
+        console.log('API call:', searchQuery);
+    }, 1000)
+
+
 
     useEffect(() => {
-
-        if (debounceTimeout) {
-            clearTimeout(debounceTimeout);
-        }
-
-        const newTimeout = setTimeout(() => {
-            console.log('Debounce eseguito', inputValue)
-            SetSearchQuery(inputValue);
-        }, 500);
-
-    }, [inputValue, SetSearchQuery]);
-
+        eseguiFetch(searchQuery)
+    }, [searchQuery])
 
 
     return (
@@ -40,7 +49,7 @@ export default function SearchBar() {
                     name="search"
                     id="search"
                     value={searchQuery}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    onChange={(e) => SetSearchQuery(e.target.value)}
                     placeholder="Cerca un Brawler ☺️🔎"
                 />
                 <button

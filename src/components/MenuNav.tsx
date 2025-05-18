@@ -10,7 +10,6 @@ export default function MenuNav() {
     const [isOpen, setIsOpen] = useState(true)
 
     const toggleMenu = () => setIsOpen(prev => !prev);
-    const setCloseMenu = () => setIsOpen(true);
 
     return (
 
@@ -28,10 +27,10 @@ export default function MenuNav() {
                 {isOpen && (
 
                     <ul className=" flex gap-4 text-white">
-                        <Link to="/" onClick={setCloseMenu} className="block hover:text-fuchsia-500">Home</Link>
-                        <Link to="/BrawlersList" onClick={setCloseMenu} className="block hover:text-fuchsia-500">Brawlers</Link>
-                        <Link to="/FavoriteBrawlers" onClick={setCloseMenu} className="block hover:text-fuchsia-500">Brawler Preferiti</Link>
-                        <Link to="/BrawlersComparison" onClick={setCloseMenu} className="block hover:text-fuchsia-500">Compara Brawler</Link>
+                        <Link to="/"  className="block hover:text-fuchsia-500">Home</Link>
+                        <Link to="/BrawlersList"  className="block hover:text-fuchsia-500">Brawlers</Link>
+                        <Link to="/FavoriteBrawlers"  className="block hover:text-fuchsia-500">Brawler Preferiti</Link>
+                        <Link to="/BrawlersComparison"  className="block hover:text-fuchsia-500">Compara Brawler</Link>
                     </ul>
                 )}
 

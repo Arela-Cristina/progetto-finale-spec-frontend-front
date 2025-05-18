@@ -3,9 +3,19 @@ import { createContext, useState, useEffect, useContext, useMemo } from "react";
 import BrawlersContext from "./BrawlersContext";
 import { Brawler } from "../types/types";
 
+// function debounce<T>(callback: (value: T) => void, delay: number) {
+//     let timer: ReturnType<typeof setTimeout>;
+//     return (value: T) => {
+//         clearTimeout(timer);
+//         timer = setTimeout(() => {
+//             callback(value)
+//         }, delay);
+//     }
+// }
+
 export interface SearchContextType {
     searchQuery: string,
-    SetSearchQuery: ((value: string) => void),
+    setSearchQuery: ((value: string) => void),
     sortOrder: 'a-z' | 'z-a';
     setSortOrder: (order: 'a-z' | 'z-a') => void;
     filteredBrawlers: Brawler[]
@@ -20,7 +30,7 @@ interface Props {
 
 export const SearchContextProvider = ({ children }: Props) => {
 
-    const [searchQuery, SetSearchQuery] = useState('')
+    const [searchQuery, setSearchQuery] = useState('') 
     const [sortOrder, setSortOrder] = useState<'a-z' | 'z-a'>('a-z')
     const [brawlers, setBrawlers] = useState<Brawler[]>([]);
 
@@ -51,9 +61,11 @@ export const SearchContextProvider = ({ children }: Props) => {
             );
     }, [brawlers, searchQuery, sortOrder]);
 
+    
+
 
     return (
-        <SearchContext.Provider value={{ searchQuery, SetSearchQuery, sortOrder, setSortOrder, setBrawlers, filteredBrawlers }}>
+        <SearchContext.Provider value={{ searchQuery, setSearchQuery, sortOrder, setSortOrder, setBrawlers, filteredBrawlers }}>
             {children}
         </SearchContext.Provider>
     )

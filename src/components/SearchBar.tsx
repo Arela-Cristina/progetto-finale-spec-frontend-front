@@ -1,12 +1,14 @@
-import { useContext, useCallback } from "react"
+import { useContext, useCallback, useRef } from "react"
 import SearchContext from "../global/SearchContext"
 
 
 function debounce<T>(callback: (value: T) => void, delay: number) {
+
     let timer: ReturnType<typeof setTimeout>;
     return (value: T) => {
         clearTimeout(timer);
         timer = setTimeout(() => {
+            console.log('⌨️ debounce trigger:', value)
             callback(value)
         }, delay);
     }
@@ -25,10 +27,12 @@ export default function SearchBar() {
     const { setSearchQuery, sortOrder, setSortOrder } = SearchQuerycontext
 
 
+
+
     const handleSearch = useCallback(
         debounce((query: string) => {
             setSearchQuery(query)
-            console.log('API CALL:', query)
+            // console.log('API CALL:', query)
         }, 1000), []
     )
 

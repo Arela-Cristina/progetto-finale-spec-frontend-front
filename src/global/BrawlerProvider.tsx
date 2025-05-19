@@ -2,18 +2,6 @@ import { ReactNode, useState, useEffect } from "react"
 import BrawlersContext from "./BrawlersContext"
 import { Brawler } from "../types/types"
 
-//debounce
-
-function debounce<T>(callback: (value: T) => void, delay: number) {
-    let timer: ReturnType<typeof setTimeout>;
-    return (value: T) => {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-            callback(value)
-        }, delay);
-    }
-}
-
 
 const BASE_API = import.meta.env.VITE_API_URL;
 

@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import BrawlersContext from "../global/BrawlersContext"
 import { Brawler } from "../types/types"
-import style from './ui-pages-styles/FavoriteBrawlers.module.css'
+// import style from './ui-pages-styles/FavoriteBrawlers.module.css'
 import { Link } from "react-router-dom"
 import brawlerPreferitiTitle from '../assets/titles/titolo-brawler-preferiti.svg'
 import spikeImage from '../assets/gif/spike.svg'
